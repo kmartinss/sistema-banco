@@ -21,12 +21,13 @@ public class AppContas {
 
             switch (opcao) {
                 case 1:
+                    //ok
                     System.out.println("Vamos criar uma conta corrente.\n Informe o número da sua conta: ");
                     numeroConta = input.nextInt();
                     contas.novaContaCorrente(numeroConta);
                     break;
-
                 case 2:
+                    //ok
                     System.out.println("Vamos criar uma conta especial.\n Informe o número da sua conta: ");
                     numeroConta = input.nextInt();
                     System.out.println("Informe o limite: ");
@@ -35,13 +36,14 @@ public class AppContas {
                     break;
 
                 case 3:
+                    //ok
                     System.out.println("Vamos criar uma conta poupança.\n Informe o número da sua conta: ");
                     numeroConta = input.nextInt();
                     contas.novaContaPoupanca(numeroConta);
                     break;
 
                 case 4:
-                //ok
+                    //ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do depósito: R$ ");
@@ -51,7 +53,7 @@ public class AppContas {
                     break;
 
                 case 5:
-                //ok
+                    //ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do saque: R$ ");
@@ -61,12 +63,12 @@ public class AppContas {
                     break;
 
                 case 6:
-                //ok
+                    //ok
                     System.out.println(contas.listar());
                     break;
 
                 case 7:
-                    // OK
+                    //OK
                     System.out.println("Digite o número da conta que você deseja remover:");
                     numeroConta = input.nextInt();
                     contas.remover(numeroConta);
