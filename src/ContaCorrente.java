@@ -27,6 +27,6 @@ public class ContaCorrente extends Conta {
 
     @Override
     public String toString() {
-        return String.format("Conta Corrente - %s", super.toString() + saldo);
+        return String.format("\n[CORRENTE] | %s", super.toString() + saldo);
     }
 }

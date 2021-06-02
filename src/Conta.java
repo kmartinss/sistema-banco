@@ -24,7 +24,7 @@ public abstract class Conta {
         return true;
     }
 
-    public abstract String getDados(); // abstract torna o método obrigatório em todas extends
+    public abstract String getDados();
 
     public int getNumeroConta() {
         return numeroConta;
@@ -35,7 +35,7 @@ public abstract class Conta {
     }
 
     public String toString() {
-        return String.format("Conta numero: %d  Saldo: R$ %.1f", numeroConta, getSaldo());
+        return String.format("Número da conta: %d | Saldo: R$ %.1f", numeroConta, getSaldo());
     }
 
 }

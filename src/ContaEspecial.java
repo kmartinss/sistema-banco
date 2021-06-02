@@ -32,7 +32,7 @@ public class ContaEspecial extends Conta {
 
     @Override
     public String toString() {
-        return String.format("Conta Especial - Limite: R$ %.2f  %s", limite, super.toString());
+        return String.format("[ESPECIAL] | Limite: R$ %.2f  %s", limite, super.toString());
     }
 
     @Override

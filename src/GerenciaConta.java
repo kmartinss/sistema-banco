@@ -7,32 +7,33 @@ public class GerenciaConta {
         listaContas = new ArrayList<>();
     }
 
-    public void novaContaCorrente(int numeroConta) {
+    public void novaContaCorrente(int numeroConta) throws InterruptedException {
         listaContas.add(new ContaCorrente(numeroConta));
-        System.out.println("Conta corrente criada com sucesso!");
+        System.out.println("Criando...");
+        Thread.sleep(1000);
+        System.out.println("Sua conta corrente foi criada com sucesso!");
     }
 
-    // public void removeContaCorrente(int numeroConta) {
-    // listaContas.remove(new ContaCorrente(numeroConta));
-    // System.out.println("Conta corrente removida com sucesso!");
-    // }
-
-    public void novoContaEspecial(int numeroConta, double limite) {
+    public void novoContaEspecial(int numeroConta, double limite) throws InterruptedException {
         listaContas.add(new ContaEspecial(numeroConta, limite));
-        System.out.println("Conta especial criada com sucesso!");
+        System.out.println("Criando...");
+        Thread.sleep(1000);
+        System.out.println("Sua conta especial foi criada com sucesso!");
 
     }
 
-    public void novaContaPoupanca(int numeroConta) {
+    public void novaContaPoupanca(int numeroConta) throws InterruptedException {
         listaContas.add(new ContaPoupanca(numeroConta));
-        System.out.println("Conta poupança criada com sucesso!");
+        System.out.println("Criando...");
+        Thread.sleep(1000);
+        System.out.println("Sua conta poupança foi criada com sucesso!");
     }
 
     public String listar() {
         String saida = "";
 
         for (Conta conta : listaContas) {
-            saida += conta.getDados() + "\n";
+            saida += conta.getDados();
         }
 
         return saida;
@@ -79,19 +80,4 @@ public class GerenciaConta {
         }
         return false;
     }
-
-    // public boolean remover(int numeroConta) {
-    //     for (Conta conta : listaContas) {
-
-    //         String numConta = String.valueOf(numeroConta);
-    //         String getNumeroConta = String.valueOf(conta.getNumeroConta());
-    //         if (getNumeroConta.equals(numConta)) {
-    //             int numeroConvertido = Integer.parseInt(numConta);
-    //             listaContas.remove(numeroConvertido);
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
-
 }

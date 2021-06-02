@@ -9,6 +9,9 @@ public class AppContas {
         double limite;
 
         do {
+            System.out.println("\nSeja bem vindo ao Banco Anhembi.");
+            Thread.sleep(1000);
+            System.out.println("\nSelecione o número da operação que deseja realizar:");
             System.out.println("[1] Nova conta corrente");
             System.out.println("[2] Nova conta especial");
             System.out.println("[3] Nova conta poupança");
@@ -21,14 +24,16 @@ public class AppContas {
 
             switch (opcao) {
                 case 1:
-                    //ok
-                    System.out.println("Vamos criar uma conta corrente.\n Informe o número da sua conta: ");
+                    System.out.println("Carregando...");
+                    Thread.sleep(1000);
+                    System.out.println("Vamos criar uma nova conta corrente.\nInforme o número da sua conta: ");
                     numeroConta = input.nextInt();
                     contas.novaContaCorrente(numeroConta);
                     break;
                 case 2:
-                    //ok
-                    System.out.println("Vamos criar uma conta especial.\n Informe o número da sua conta: ");
+                    System.out.println("Carregando...");
+                    Thread.sleep(1000);
+                    System.out.println("Vamos criar uma conta especial.\nInforme o número da sua conta: ");
                     numeroConta = input.nextInt();
                     System.out.println("Informe o limite: ");
                     limite = input.nextDouble();
@@ -36,14 +41,15 @@ public class AppContas {
                     break;
 
                 case 3:
-                    //ok
-                    System.out.println("Vamos criar uma conta poupança.\n Informe o número da sua conta: ");
+                    System.out.println("Carregando...");
+                    Thread.sleep(1000);
+                    System.out.println("Vamos criar uma conta poupança.\nInforme o número da sua conta: ");
                     numeroConta = input.nextInt();
                     contas.novaContaPoupanca(numeroConta);
                     break;
 
                 case 4:
-                    //ok
+                    // ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do depósito: R$ ");
@@ -53,7 +59,7 @@ public class AppContas {
                     break;
 
                 case 5:
-                    //ok
+                    // ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do saque: R$ ");
@@ -63,15 +69,16 @@ public class AppContas {
                     break;
 
                 case 6:
-                    //ok
                     System.out.println(contas.listar());
                     break;
 
                 case 7:
-                    //OK
                     System.out.println("Digite o número da conta que você deseja remover:");
                     numeroConta = input.nextInt();
+                    System.out.println("Removendo...");
+                    Thread.sleep(1000);
                     contas.remover(numeroConta);
+                    System.out.println("Conta removida com sucesso!");
                     break;
                 case 8:
                     break;

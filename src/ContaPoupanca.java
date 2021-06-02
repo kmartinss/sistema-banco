@@ -1,5 +1,4 @@
 public class ContaPoupanca extends Conta {
-    
     private static double taxa;
 
     public ContaPoupanca(int numeroConta) {
@@ -17,10 +16,9 @@ public class ContaPoupanca extends Conta {
 
     @Override
     public String toString() {
-        return String.format("Conta Poupança - Taxa de operação: R$ %.2f  %s", taxa, super.toString());
+        return String.format("[POUPANÇA] | Taxa de operação: R$ %.2f  %s", taxa, super.toString());
     }
 
-    // o método que altera o atributo de classe deve ser static também
     public static void setTaxa(double taxaPoup) {
         taxa = taxaPoup;
     }
