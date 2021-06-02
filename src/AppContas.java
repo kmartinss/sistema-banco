@@ -49,7 +49,6 @@ public class AppContas {
                     break;
 
                 case 4:
-                    // ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do depósito: R$ ");
@@ -59,7 +58,6 @@ public class AppContas {
                     break;
 
                 case 5:
-                    // ok
                     System.out.print("Informe o numero da conta: ");
                     numeroConta = input.nextInt();
                     System.out.print("Informe o valor do saque: R$ ");
