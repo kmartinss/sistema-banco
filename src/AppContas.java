@@ -4,7 +4,6 @@ public class AppContas {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         GerenciaConta contas = new GerenciaConta();
-
         int opcao, numeroConta = 0;
         double limite;
 
