@@ -5,7 +5,7 @@ public class AppContas {
         Scanner input = new Scanner(System.in);
         GerenciaConta contas = new GerenciaConta();
         int opcao, numeroConta = 0;
-        double limite;
+        double limite, taxa = 0;
 
         do {
             System.out.println("\nSeja bem vindo ao Banco Anhembi.");
@@ -18,7 +18,7 @@ public class AppContas {
             System.out.println("[5] Realizar saque");
             System.out.println("[6] Listar");
             System.out.println("[7] Remover conta");
-            System.out.println("[8] Sair");
+            System.out.println("[8] Sair\n");
             opcao = input.nextInt();
 
             switch (opcao) {
@@ -34,7 +34,7 @@ public class AppContas {
                     Thread.sleep(1000);
                     System.out.println("Vamos criar uma conta especial.\nInforme o número da sua conta: ");
                     numeroConta = input.nextInt();
-                    System.out.println("Informe o limite: ");
+                    System.out.println("Informe o limite: R$ ");
                     limite = input.nextDouble();
                     contas.novoContaEspecial(numeroConta, limite);
                     break;
@@ -44,7 +44,10 @@ public class AppContas {
                     Thread.sleep(1000);
                     System.out.println("Vamos criar uma conta poupança.\nInforme o número da sua conta: ");
                     numeroConta = input.nextInt();
+                    System.out.println("Informe o valor da taxa: R$ ");
+                    taxa = input.nextDouble();
                     contas.novaContaPoupanca(numeroConta);
+                    contas.TaxaPoup(taxa);
                     break;
 
                 case 4:
@@ -70,7 +73,7 @@ public class AppContas {
                     break;
 
                 case 7:
-                    System.out.println("Digite o número da conta que você deseja remover:");
+                    System.out.println("Digite o número da conta que você deseja remover: ");
                     numeroConta = input.nextInt();
                     System.out.println("Removendo...");
                     Thread.sleep(1000);

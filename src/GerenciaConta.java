@@ -80,4 +80,12 @@ public class GerenciaConta {
         }
         return false;
     }
+
+public boolean TaxaPoup(double taxa) {
+    if (taxa < 0) {
+        return false;
+    }
+    ContaPoupanca.setTaxa(taxa);
+    return true;
+}
 }

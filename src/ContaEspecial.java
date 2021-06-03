@@ -37,6 +37,6 @@ public class ContaEspecial extends Conta {
 
     @Override
     public String getDados() {
-        return "[ESPECIAL] " + getNumeroConta();
+        return "\n[ESPECIAL] " + getNumeroConta();
     }
 }

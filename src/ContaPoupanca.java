@@ -14,11 +14,6 @@ public class ContaPoupanca extends Conta {
         return 0;
     }
 
-    @Override
-    public String toString() {
-        return String.format("[POUPANÇA] | Taxa de operação: R$ %.2f  %s", taxa, super.toString());
-    }
-
     public static void setTaxa(double taxaPoup) {
         taxa = taxaPoup;
     }
@@ -28,7 +23,12 @@ public class ContaPoupanca extends Conta {
     }
 
     @Override
+    public String toString() {
+        return String.format("[POUPANÇA] | Taxa de operação: R$ %.2f  %s", taxa, super.toString());
+    }
+
+    @Override
     public String getDados() {
-        return "[POUPANÇA] " + getNumeroConta();
+        return "\n[POUPANÇA] " + getNumeroConta();
     }
 }

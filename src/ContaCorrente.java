@@ -22,7 +22,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public String getDados() {
-        return "[CORRENTE] " + getNumeroConta();
+        return "\n[CORRENTE] " + getNumeroConta();
     }
 
     @Override
